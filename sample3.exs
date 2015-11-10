@@ -1,13 +1,7 @@
 defmodule Sample do
-  defmacro sample(list) do
-    IO.inspect list
+  defmacro sample(args) do
+    IO.inspect args
     ""
-  end
-
-  defmacro this(args) do
-  end
-
-  def that(args) do
   end
 end
 
@@ -16,9 +10,8 @@ defmodule Main do
   import Sample
 
   def main() do
-    sample(%{id: f.id})
     sample(this is a pen)
-    sample(that is not a pen)
+    sample(this is a <b>new</b> pen)
   end
 end
 
